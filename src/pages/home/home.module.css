@@ -1,0 +1,6 @@
+ .principal {
+     background: linear-gradient(0deg, rgba(82, 59, 255, 0) 0%, rgba(34, 28, 45, 0.5) 81.73%);
+      background-color: var(--fundo-escuro);
+     height: 100vh;
+}
+

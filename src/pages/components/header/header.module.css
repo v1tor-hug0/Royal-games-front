@@ -1,0 +1,25 @@
+
+.header {
+    background: linear-gradient(360deg, #221C2D 0%, rgba(34, 28, 45, 0) 100%);
+    background-color: var(--fundo-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.btn_login {
+    color: var(--cinza);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--vermelho);
+}
