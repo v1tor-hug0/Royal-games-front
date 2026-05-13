@@ -1,6 +1,93 @@
  .principal {
-     background: linear-gradient(0deg, rgba(82, 59, 255, 0) 0%, rgba(34, 28, 45, 0.5) 81.73%);
-      background-color: var(--fundo-escuro);
-     height: 100vh;
+     /*background: linear-gradient(270deg, rgba(82, 59, 255, 0) 0%, rgba(34, 28, 45, 0.5) 81.73%);*/
+     background: radial-gradient(86.81% 50% at 50% 50%, #362968 0%, #2C224C 32.21%, #221B2F 100%);
+     background-color: var(--fundo-claro);
+     color: var(--cinza);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
 }
 
+ .banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+ }
+
+ .infoLeft{
+     display: flex;
+     flex-direction: column;
+     gap: 40px;
+     margin-left: 10%;
+ }
+
+ .infoLeft h3{
+     font-size: 2.5rem;
+ }
+
+ .infoLeft p{
+    font-size: 1.5rem;
+ }
+
+ .infoRight img{
+    width: 30vw;
+     height: 100vh;
+ }
+
+.catalogo{
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    min-height: 100vh;
+}
+
+.catalogo h3{
+    font-size: 2.5rem;
+    padding: 10px;
+    border-bottom: solid 1px var(--vermelho);
+}
+
+.comportamento {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 5%;
+}
+
+.comportamento h3{
+    font-size: 2.5rem;
+    padding: 15px 30px;
+    border-bottom: solid 1px var(--vermelho);
+}
+
+.imagens {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.imagens img {
+    width: 40%;
+}
+
+.comportamento p {
+    font-size: 2rem;
+    text-align: center;
+}

@@ -19,6 +19,7 @@
 
 body {
   font-family: var(--font-padrao);
+  background-color: var(--fundo-claro);
 }
 
 a{
