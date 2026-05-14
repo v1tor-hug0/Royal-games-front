@@ -38,6 +38,28 @@
     background-color: rgba(214, 210, 230, 0.2);
     padding: 10px;
     color: var(--cinza);
+    text-align: center;
+}
+
+.filtrar option{
+    color: black;
+}
+
+
+
+.link{
+    color: var(--cinza);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--vermelho);
+    width: 20%;
+    text-align: center;
+}
+
+.link:hover{
+    cursor: pointer;
+    background-color: var(--vermelho);
 }
 
 .catalogo{

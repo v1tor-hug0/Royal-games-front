@@ -8,7 +8,7 @@ const detalheJogo = () => {
             <Header></Header>
             <main className={styles.principal}>
                     <div className={styles.content}>
-                    <h2>Detalhe do Jogo</h2>
+                    <h2>Detalhes do Jogo</h2>
                     
                         <div className={styles.info}>
                             <div className={styles.imagem}>

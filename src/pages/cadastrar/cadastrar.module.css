@@ -1,0 +1,136 @@
+.principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--cinza);
+    gap: 5rem;
+    margin-top: 20px;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    width: 80%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: 80vh;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    height: 65vh;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+
+}
+
+.inputs label {
+    font-weight: 500;
+    align-self: flex-start;
+    font-size: 1.75rem;
+    color: var(--cinza);
+}
+
+.inputs input, .inputs select {
+    border-radius: 5px;
+    background-color: rgba(214, 210, 230, 0.2);
+    padding: 10px;
+    margin-top: .5rem;
+    color: var(--cinza);
+}
+
+.classificacao label{
+    font-size: 1.5rem;
+}
+
+.cima{
+    width: 50%;
+}
+
+.cima input{
+    width: 100%;
+}
+
+.meio, .baixo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 50%;
+}
+
+.meio div {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.baixo div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.descricao{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.descricao textarea{
+    width: 100%;
+    min-height: 100px;
+    border-radius: 5px;
+    background-color: rgba(214, 210, 230, 0.2);
+    padding: 10px;
+    margin-top: .5rem;
+    color: var(--cinza);
+}
+
+.btn_cadastrar{
+    width: 15%;
+    background-color: transparent;
+    color: var(--cinza);
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--vermelho);
+}
+
+.btn_cadastrar:hover{
+    cursor: pointer;
+    background-color: var(--vermelho);
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.lista h2{
+    text-align: center;
+    padding: 1rem 3rem;
+    border-bottom: 1px solid var(--vermelho);
+}

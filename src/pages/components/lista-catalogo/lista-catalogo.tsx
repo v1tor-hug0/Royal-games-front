@@ -1,5 +1,6 @@
 import styles from "./lista_catalogo.module.css"
 import CardJogos from "@/pages/components/card-jogos/card-jogos";
+import Link from "next/link";
 
 const ListaCatalogo = () => {
     return(
@@ -12,9 +13,7 @@ const ListaCatalogo = () => {
                     <option value="menor">Menor Preço</option>
                     <option value="Maior">Maior Preço</option>
                 </select>
-                <select name="categoria" id="categoria" className={styles.categorias}>
-                    <option value="teste">teste</option>
-                </select>
+                <Link href="/cadastrar" className={styles.link}>Adicionar jogo</Link>
             </div>
             <div className={styles.catalogo}>
                 <CardJogos></CardJogos>

@@ -8,12 +8,21 @@
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 20px 0;
+    color: var(--cinza);
 }
 
 .container img {
     width: 90%;
     height: 50%;
     border-radius: 10px;
+}
+
+.link_imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .container h6{
@@ -28,7 +37,7 @@
     align-items: center;
 }
 
-.textos button  {
+.link  {
     padding: 10px 40px;
     border-radius: 10px;
     border: none;
