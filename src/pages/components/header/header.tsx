@@ -6,7 +6,9 @@ const Header = () => {
         <>
             <header className={styles.header}>
                 <div className={styles.container}>
-                    <img src="/imgs/Logo%20Header.png" alt="Logo Royal Games"/>
+                    <Link href="/home" >
+                        <img src="/imgs/Logo%20Header.png" alt="Logo Royal Games"/>
+                    </Link>
                     <nav className={styles.nav_menu}>
                         <Link href="/login" className={styles.btn_login}>Login</Link>
                     </nav>
@@ -16,3 +18,4 @@ const Header = () => {
     )
 }
 export default Header
+

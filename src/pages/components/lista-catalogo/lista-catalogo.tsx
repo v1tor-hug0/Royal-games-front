@@ -4,7 +4,8 @@ import CardJogos from "@/pages/components/card-jogos/card-jogos";
 const ListaCatalogo = () => {
     return(
         <>
-            <main className={styles.content}>
+        <main className={styles.principal}>
+            <div className={styles.content}>
             <div className={styles.filtros}>
                 <input type="text" className={styles.input_pesquisa} placeholder="Pesquisar"/>
                 <select name="filtrar" id="filtrar" className={styles.filtrar}>
@@ -35,8 +36,8 @@ const ListaCatalogo = () => {
                         <li><img src="/imgs/seta.png" alt=""/></li>
                     </ul>
                 </div>
-            </main>
-
+            </div>
+        </main>
         </>
     )
 };
