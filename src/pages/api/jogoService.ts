@@ -5,9 +5,9 @@ type JogoForm = {
     imagem: File | null,
     descricao: string,
     preco: number,
-    GeneroIds: number[],
-    PlataformaIds: number[],
-    ClassificacaoID: number
+    generoIds: number[],
+    plataformaIds: number[],
+    classificacaoID: number
 }
 
 
@@ -28,21 +28,55 @@ export async function listarJogos(){
     try {
         const response = await api.get("Jogo");
 
-        console.log(response.data);
         const jogosAtivos = response.data.filter((jogo: JogoLista) => jogo.statusJogo == true);
 
-        console.log(jogosAtivos);
 
         const jogos = jogosAtivos.map((jogo: JogoLista) => (
             {...jogo ,
                 imagemUrl: `${api.defaults.baseURL}${jogo.imagemUrl}`
             }
         ))
-        console.log(jogos);
+
 
         return jogos;
     }
     catch(error: any) {
+        throw new Error(error.response.data)
+    }
+}
+
+export async function listarJogosId( id: number){
+    try {
+        const response = await api.get("Jogo/" + id)
+
+        const jogos = {
+            ...response.data,
+            imagemUrl: `${api.defaults.baseURL}${response.data.imagemUrl}`
+
+        };
+
+        return jogos;
+    }
+    catch(error: any) {
+        throw new Error(error.response.data)
+    }
+}
+
+export async function CadastrarJogo(dados: JogoForm){
+    try{
+        const formData = new FormData();
+        formData.append("nome", dados.nome);
+        formData.append("descricao", dados.descricao);
+        formData.append("preco", (dados.preco).toString())
+        if(dados.imagem){
+            formData.append("imagem", dados.imagem);
+        }
+
+        dados.generoIds.forEach((id) => {
+            formData.append("generoIds"), id.toString());
+            })
+    }
+    catch(error: any){
         throw new Error(error.response.data)
     }
 }

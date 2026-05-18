@@ -2,13 +2,59 @@ import Footer from "../components/Footer/footer";
 import Header from "../components/header/header";
 import ListaCatalogo from "../components/lista-catalogo/lista-catalogo";
 import styles from "./cadastrar.module.css"
+import React, {useState} from "react";
+import {useRouter} from "next/router";
+import {listarGenero} from "@/pages/api/generoService";
+
+interface Genero{
+    generoID: number;
+    nome: string;
+}
 
 const Cadastrar = () => {
+
+    const [genero, setGenero] = useState<Genero[]>([]);
+    const [nome, setNome] = useState<string>("");
+    const [descricao, setDescricao] = useState<string>("");
+    const [preco, setPreco] = useState<number>(0);
+    const [imagem, setImagem] = useState<File | null>(null);
+    const [generoSelecionado, setGeneroSelecionado] = useState<number[]>([]);
+
+
+    const router = useRouter();
+    const id = router.query.id;
+
+    async function listarGeneroEmAdicionar(id: number) {
+        const lista = await listarGenero()
+        console.log(lista)
+        setGenero(lista.data)
+    }
+
+
+    async function Cadastrar(e: React.FormEvent) {
+        e.preventDefault();
+        try{
+            const dados  ={
+                nome,
+                descricao,
+                preco,
+                imagem,
+                generoID: generoSelecionado
+            }
+        await
+        }
+        catch(error: any){
+            error.message
+        }
+
+    }
+
+
     return (
         <>
             <Header></Header>
             <main className={styles.principal}>
-                <form action="" className={styles.formulario}>
+                <form action="" className={styles.formulario} onSubmit={Cadastrar}>
                     <div className={styles.content}>
                     <h1>Cadastrar novo jogo</h1>
                     <div className={styles.inputs}>

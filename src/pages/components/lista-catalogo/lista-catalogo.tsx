@@ -26,7 +26,6 @@ const ListaCatalogo = () => {
         try {
             const lista = await listarJogos();
             setJogos(lista);
-            console.log(lista);
         }
         catch (error: any){
             console.log(error.message);
